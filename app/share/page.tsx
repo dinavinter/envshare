@@ -30,10 +30,6 @@ export default function Home() {
 
       const { id } = (await fetch("/api/v1/store", {
         method: "POST",
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
         body: JSON.stringify({
           ttl: ttl * ttlMultiplier,
           reads,
