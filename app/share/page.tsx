@@ -40,8 +40,7 @@ export default function Home() {
           encrypted: toBase58(encrypted),
           iv: toBase58(iv),
         }),
-      })
-    .then((r) => r.json())) as { id: string };
+      }).then((r) => r.json())) as { id: string };
 
       const compositeKey = encodeCompositeKey(LATEST_KEY_VERSION, id, key);
 
